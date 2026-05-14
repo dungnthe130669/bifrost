@@ -23,6 +23,8 @@ type TableRateLimit struct {
 	RequestCurrentUsage  int64     `gorm:"default:0" json:"request_current_usage"`                   // Current request usage
 	RequestLastReset     time.Time `gorm:"index" json:"request_last_reset"`                          // Last time request counter was reset
 
+	// IsGlobal marks this as the instance-wide rate limit. Only one row can have is_global=true,
+	IsGlobal        bool `gorm:"index;default:false" json:"is_global"`
 	CalendarAligned bool `gorm:"default:false" json:"calendar_aligned"` // When true, all budgets under this VK reset at clean calendar boundaries
 
 	// Config hash is used to detect the changes synced from config.json file

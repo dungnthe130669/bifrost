@@ -394,6 +394,11 @@
                 "type": "boolean",
                 "description": "Snap reset windows to clean calendar boundaries (day, week, month, year)",
                 "default": false
+              },
+              "is_global": {
+                "type": "boolean",
+                "description": "When true, this budget is an instance-wide cap enforced before any per-entity checks",
+                "default": false
               }
             },
             "required": ["id", "max_limit", "reset_duration"],
@@ -449,6 +454,11 @@
               "calendar_aligned": {
                 "type": "boolean",
                 "description": "Snap reset windows to clean calendar boundaries (day, week, month, year)",
+                "default": false
+              },
+              "is_global": {
+                "type": "boolean",
+                "description": "When true, this rate limit is an instance-wide cap enforced before any per-entity checks",
                 "default": false
               }
             },

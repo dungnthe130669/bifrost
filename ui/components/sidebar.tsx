@@ -689,6 +689,13 @@ export default function AppSidebar() {
 				hasAccess: hasAnyGovernanceAccess,
 				subItems: [
 					{
+						title: "Global Limits",
+						url: "/workspace/governance/global-limits",
+						icon: Globe,
+						description: "Instance-wide budget and rate limits",
+						hasAccess: hasVirtualKeysAccess,
+					},
+					{
 						title: "Virtual Keys",
 						url: "/workspace/governance/virtual-keys",
 						icon: KeyRound,
